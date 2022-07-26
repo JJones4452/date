@@ -40,6 +40,10 @@
 #  endif
 #endif  // HAS_STRING_VIEW
 
+#if !defined(NOMINMAX) && defined(_WIN32)
+#error NOMINMAX Preprocessor directive required
+#endif
+
 #include <cassert>
 #include <algorithm>
 #include <cctype>
